@@ -1,4 +1,5 @@
-class StatusesController < ApplicationController
+class Api::V1::StatusesController < ApplicationController
+  before_action :authenticate_api_user!
   before_action :set_status, only: [:show, :update, :destroy]
 
   # GET /statuses
